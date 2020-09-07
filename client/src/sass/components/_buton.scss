@@ -1,0 +1,133 @@
+@import "../abstract/variables";
+
+&-btn {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  transition: all 0.2s;
+  border: none;
+  border-radius: 10rem;
+  outline: none;
+  position: relative;
+  animation: moveUp 1s ease-in-out 0.5s;
+  animation-fill-mode: backwards;
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1.4rem 2rem rgba(0, 0, 0, 0.4);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.8);
+      opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.7rem 2rem rgba(0, 0, 0, 0.3);
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all, 0.4s;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &-white {
+    background-color: $background-shade;
+    color: $text-color-gray;
+    width: 12rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    &::after {
+      background-color: $background-shade;
+      border-radius: 10rem;
+    }
+  }
+  &-dark {
+    background-color: $background-dark;
+    color: $text-color-light;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    &::after {
+      background-color: $background-dark;
+      border-radius: 10rem;
+    }
+  }
+  &-edit {
+    padding: 1rem 0.05rem;
+    margin: 0.05rem;
+    text-align: center;
+    background-color: $button-color-blue-dark;
+    color: $text-color-dark;
+    width: 5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    &::after {
+      background-color: $button-color-blue-dark;
+      border-radius: 10rem;
+    }
+  }
+  &-delete {
+    padding: 1rem 0.05rem;
+    text-align: center;
+    background-color: $text-color-warning;
+    color: $text-color-light;
+    font-size: 0.75rem;
+    width: 5rem;
+    font-weight: 700;
+
+    &::after {
+      background-color: $text-color-warning;
+      border-radius: 10rem;
+    }
+  }
+  &-update {
+    padding: 1rem 0.05rem;
+    margin: 0.05rem;
+    text-align: center;
+    background-color: $text-color-green;
+    color: $text-color-dark;
+    width: 7rem;
+    font-size: 1rem;
+    font-weight: 400;
+
+    &::after {
+      background-color: $text-color-green;
+      border-radius: 3rem;
+    }
+  }
+  &-close {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    background-color: $text-color-warning;
+    border-radius: 100rem;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+  }
+  &-done {
+    padding: 1rem 0.05rem;
+    margin: 0.05rem;
+    text-align: center;
+    background-color: $text-color-green;
+    color: $text-color-dark;
+    width: 4rem;
+    font-size: 1rem;
+    font-weight: 400;
+
+    &::after {
+      background-color: $text-color-green;
+      border-radius: 3rem;
+    }
+  }
+}

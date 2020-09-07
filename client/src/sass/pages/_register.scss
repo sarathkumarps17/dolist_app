@@ -1,0 +1,53 @@
+.register {
+  position: relative;
+  @include absCenter;
+  width: 70vw;
+  height: 70vh;
+  z-index: 100;
+  background-image: linear-gradient(
+      105deg,
+      rgba($background-white, 0.9) 0%,
+      rgba($background-white, 0.9) 60%,
+      transparent 60%
+    ),
+    url("../../resorces/images/dashboard_one.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-size: 100% 100%;
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.35);
+  &-container {
+    width: 50%;
+    padding: 3rem 2rem;
+    h1 {
+      padding: 0.5rem 1rem;
+      text-align: center;
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-family: "Nunito", sans-serif;
+      color: $primary-color-dark;
+      @include animationRight;
+    }
+    .register-note {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      color: $text-color-dark;
+      @include animationLeft;
+    }
+    .register-form {
+      padding-top: 3rem;
+      text-align: left;
+      font-size: 1.5rem;
+      @import "components/form";
+    }
+    &-btn-box {
+      position: absolute;
+      bottom: 6vh;
+      left: 20%;
+    }
+    @import "components/buton";
+  }
+}

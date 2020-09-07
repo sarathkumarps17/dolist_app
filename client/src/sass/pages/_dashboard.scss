@@ -1,0 +1,58 @@
+.dashboard-item-container {
+  margin-top: 10vh;
+  font-family: inherit;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 90vh;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  .dashboard-item-cover-btn-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    &-edit,
+    &-delete {
+      padding: 1rem;
+    }
+  }
+  .dashboard-item-cover {
+    position: relative;
+    width: auto;
+    height: fit-content;
+    margin: 4rem 2rem;
+    padding: 2.5rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($background-dark, 0.5);
+    transition: transition 0.3;
+    background-color: rgba($background-shade, 0.8);
+    font-family: inherit;
+
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.05);
+    }
+    &-btn-container {
+      position: absolute;
+      bottom: -3%;
+      align-self: center;
+    }
+    @import "components/buton";
+  }
+
+  .dashboard-item {
+    @import "components/items";
+  }
+  @import "layout/addItemContainer";
+  @import "components/updateItem";
+}
+.btn-container {
+  position: fixed;
+  @include absCenter;
+  z-index: 2000;
+  @import "components/buton";
+}
+.btn-container-close {
+  position: fixed;
+  @include absCenter;
+  z-index: 2000;
+  @import "components/buton";
+}

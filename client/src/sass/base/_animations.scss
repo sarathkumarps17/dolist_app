@@ -1,0 +1,32 @@
+@import "../abstract/mixins";
+
+@keyframes moveInRight {
+  0% {
+    @include animX(0, -15rem);
+  }
+  80% {
+    @include animX(0.8, 3rem);
+  }
+  100% {
+    @include animX(1, 0);
+  }
+}
+@keyframes moveInLeft {
+  0% {
+    @include animX(0, 15rem);
+  }
+  80% {
+    @include animX(0.8, -3rem);
+  }
+  100% {
+    @include animX(1, 0);
+  }
+}
+@keyframes moveUp {
+  0% {
+    @include animY(0, 5rem);
+  }
+  100% {
+    @include animY(1, 0);
+  }
+}

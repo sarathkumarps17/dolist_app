@@ -1,0 +1,19 @@
+export const SET_ALERT = "SET_ALERT";
+export const REMOVE_ALERT = "REMOVE_ALERT";
+
+export const REGISTER_SUCSUSS = "REGISTER_SUCSUSS";
+export const REGISTER_FAILURE = "REGISTER_FAILURE";
+export const USER_LOADED = "USER_LOADED";
+export const AUTH_FAILED = "AUTH_FAILED";
+export const LOGIN_SUCSUSS = "LOGIN_SUCSUSS";
+export const LOGIN_FAILURE = "LOGIN_FAILURE";
+export const LOGOUT = "LOGOUT";
+
+export const COLLECTION_FETCHED = "COLLECTION_FETCHED";
+export const FAILED_FETCHING = "FAILED_FETCHING";
+export const CLEAR_COLLECTION = "CLEAR_COLLECTION";
+
+export const DOLIST_LOADED = "DOLIST_LOADED";
+export const FAILED_LOAIDNG = "FAILED_LOAIDNG";
+export const CLEAR_DOLIST = "CLEAR_DOLIST";
+export const DONE = "DONE";

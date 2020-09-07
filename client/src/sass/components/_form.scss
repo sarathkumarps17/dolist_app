@@ -1,0 +1,71 @@
+&-name,
+&-password,
+&-passcode {
+  font-size: 2rem;
+  margin-left: 2rem;
+  padding: 1.5rem;
+  border-radius: 2px;
+  background-color: rgba($background-white, 0.1);
+  font-family: initial;
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba($background-dark, 0.25);
+    border-bottom: 3px solid $text-color-green;
+    &::-webkit-input-placeholder {
+      color: $background-dark;
+    }
+  }
+  &:focus:invalid,
+  &:hover:invalid {
+    border-bottom: 3px solid $primary-color-dark;
+  }
+}
+
+&-selector {
+  text-align: left;
+  font-family: inherit;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  padding: 1.5rem;
+  color: $text-color-gray;
+  &-label {
+    font-family: inherit;
+    padding-right: 4rem;
+  }
+  &-select {
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: $text-color-dark;
+    border: none;
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($background-dark, 0.25);
+      border-bottom: 3px solid $text-color-green;
+    }
+    &:active,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+}
+
+&-name {
+  @include animationRight;
+}
+&-password {
+  @include animationLeft;
+}
+
+&-passcode {
+  @include animationRight;
+}
+&-selector {
+  @include animationLeft;
+}

@@ -1,0 +1,28 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 40%; } }
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #141b35;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh; }

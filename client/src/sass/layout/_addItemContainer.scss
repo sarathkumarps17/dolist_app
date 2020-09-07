@@ -1,0 +1,26 @@
+.addItem-container {
+  position: relative;
+  @include absCenter;
+  width: 50vw;
+  min-height: 60vh;
+  z-index: 100;
+  background-image: linear-gradient(
+      105deg,
+      rgba($background-white, 0.9) 0%,
+      rgba($background-white, 0.9) 60%,
+      transparent 60%
+    ),
+    url("../../resorces/images/dashboard_one.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-size: 100% 100%;
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.35);
+  font-family: "Merriweather Sans", sans-serif;
+  color: $text-color-dark;
+  &-box{
+     @import "components/addItem";
+  }
+ 
+}

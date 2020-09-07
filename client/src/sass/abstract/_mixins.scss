@@ -1,0 +1,85 @@
+@mixin animX($opacity, $translateX) {
+  opacity: $opacity;
+  transform: translateX($translateX);
+}
+@mixin animY($opacity, $translateY) {
+  opacity: $opacity;
+  transform: translateY($translateY);
+}
+
+@mixin animationLeft {
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  animation-timing-function: ease-out;
+}
+@mixin animationRight {
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  animation-timing-function: ease-out;
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin visualCenter {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    //1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    //1800px
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+@mixin scrollbar-y {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.1);
+    border-radius: 2rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.1);
+  }
+}
+@mixin alert {
+  padding: 1rem;
+  margin: 1rem 2rem;
+  box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.35);
+  color: $background-white;
+  border-radius: 1.5rem;
+}

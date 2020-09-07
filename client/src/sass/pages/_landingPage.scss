@@ -1,0 +1,51 @@
+.landing-page {
+  position: relative;
+  width: 96vw;
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($primary-color-dark, 0.75),
+      rgba($primary-color-light, 0.7)
+    ),
+    url("../../resorces/images/bg_two.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  &-container {
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include respond(tab-land) {
+      @include absCenter;
+      line-height: 6rem;
+    }
+
+    .landing-page-header {
+      text-transform: uppercase;
+
+      font-family: "Concert One", cursive;
+      font-size: 7rem;
+      letter-spacing: 2.2rem;
+      color: $text-color-light;
+      text-align: center;
+      @include animationRight;
+    }
+    .landing-page-note {
+      font-family: "Nunito", sans-serif;
+      font-size: 3rem;
+      font-weight: 400;
+      color: $text-color-dark;
+      text-align: center;
+      padding-bottom: 2rem;
+
+      @include animationLeft;
+      @include respond(tab-land) {
+        font-size: 2rem;
+      }
+    }
+  }
+  @import "components/buton";
+}

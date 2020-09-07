@@ -1,0 +1,10 @@
+.footer-box {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  .footer {
+    font-size: 1rem;
+    text-align: center;
+  }
+}

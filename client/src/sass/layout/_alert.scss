@@ -1,0 +1,22 @@
+.alert {
+  width: 40vw;
+  position: absolute;
+  z-index: 5000;
+  top: 6vh;
+  left: 50vw;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  text-align: center;
+  &-danger {
+    background-color: rgba($text-color-warning, 0.85);
+    @include alert;
+  }
+  &-success {
+    background-color: rgba($text-color-green, 0.85);
+    @include alert;
+  }
+  &-warning {
+    background-color: rgba($primary-color-light, 0.85);
+    @include alert;
+  }
+}

@@ -1,0 +1,57 @@
+// @import "../abstract/variables";
+// .header {
+//   height: 90vh;
+//   background-image: linear-gradient(
+//       to right bottom,
+//       rgba($dark-green, 0.801),
+//       rgba($light-green, 0.795)
+//     ),
+//     url("../img/hero.jpg");
+//   background-size: cover;
+//   background-position: top;
+//   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+//   position: relative;
+//   .logo-box {
+//     position: absolute;
+//     top: 3rem;
+//     left: 3rem;
+//   }
+//   .logo {
+//     height: 3.5rem;
+//   }
+
+//   .heading-box {
+//     position: absolute;
+
+//     top: 40%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+
+//     .heading {
+//       text-transform: uppercase;
+//       color: $bg-color;
+//       text-align: center;
+
+//   &-main {
+//     display: block;
+//     font-size: 6rem;
+//     font-weight: 400;
+//     letter-spacing: 3.2rem;
+
+//     animation-name: moveInRight;
+//     animation-duration: 1s;
+//     animation-delay: 0.1s;
+//     animation-timing-function: ease-out;
+//   }
+//       &-sub {
+//         display: block;
+//         font-size: 2.5rem;
+//         font-weight: 700;
+//         letter-spacing: 1.5rem;
+//         animation: moveInLeft 1s 0.1s ease-out;
+//         padding-bottom: 2rem;
+//       }
+//     }
+//   }
+//   @import "../components/buton";
+// }

@@ -1,0 +1,29 @@
+.collection-container {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5vh;
+  font-family: inherit;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 30vh;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .collection-item {
+    position: relative;
+    width: auto;
+    height: fit-content;
+    margin: 1.5rem 3rem;
+    padding: 2.5rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($background-dark, 0.5);
+    transition: transition 0.3;
+    background-color: rgba($background-shade, 0.8);
+    font-family: inherit;
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.05);
+    }
+    @import "components/items";
+  }
+}

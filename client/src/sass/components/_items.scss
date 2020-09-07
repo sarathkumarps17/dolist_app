@@ -1,0 +1,57 @@
+&-heading {
+  font-family: "Nunito", sans-serif;
+  color: $primary-color-dark;
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+&-content {
+  color: $text-color-dark;
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+&-properties {
+  font-family: "Concert One", cursive;
+  left: 0;
+  text-align: left;
+  .text {
+    padding-right: 2rem;
+  }
+
+  &-category {
+    padding: 0.5rem 1rem;
+    color: $text-color-dark;
+    font-size: 1.25rem;
+    img {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+  &-priority {
+    padding: 0.5rem 1rem;
+    color: $text-color-dark;
+    font-size: 1.25rem;
+    img {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+  .text {
+    padding-right: 2rem;
+    color: $text-color-dark;
+  }
+  &-done {
+    padding: 0.5rem 1rem;
+    color: $text-color-green;
+    font-size: 1.25rem;
+  }
+  &-notDone {
+    padding: 0.5rem 1rem;
+    color: $text-color-warning;
+    font-size: 1.25rem;
+  }
+}
+@import "components/buton";

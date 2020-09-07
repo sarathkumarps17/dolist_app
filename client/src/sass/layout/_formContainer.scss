@@ -1,0 +1,12 @@
+.container {
+  position: absolute;
+  width: 95vw;
+  min-height: 95vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($primary-color-dark, 0.75),
+    rgba($primary-color-light, 0.7)
+  );
+  @import "pages/loginPage";
+  @import "pages/register";
+}

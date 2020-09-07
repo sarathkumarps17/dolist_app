@@ -17,7 +17,7 @@ dolist.post(
       return res.end();
     }
     try {
-      const { heading, content, isDone, priority, category } = req.body;
+      const { heading, content, isDone, priority } = req.body;
       let item = await DoList.findOne({ heading });
       if (item) {
         return res.send("heading already exist, please change the heading");
@@ -74,7 +74,6 @@ dolist.put(
   [
     check("heading", "Heading can not be empty").not().isEmpty(),
     check("content", "Content can not be empty").not().isEmpty(),
-    check("category", "Category can not be empty").not().isEmpty(),
   ],
   auth,
   async (req, res) => {
@@ -88,7 +87,7 @@ dolist.put(
       const item = await DoList.findOne({ _id: item_id, user: id }).select(
         "-_id"
       );
-      const fields = { heading, content, isDone, priority, category };
+      const fields = { heading, content, isDone, priority };
       if (!item) {
         res.status(400).json({ error: "ERROR" });
         return res.end();

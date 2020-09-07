@@ -1,0 +1,11 @@
+.home-container {
+  position: absolute;
+  @include absCenter;
+  text-align: center;
+  width: 90vw;
+  height: 80vh;
+  font-family: "Merriweather Sans", sans-serif;
+  color: $text-color-dark;
+  @import "pages/home";
+  @include scrollbar-y;
+}

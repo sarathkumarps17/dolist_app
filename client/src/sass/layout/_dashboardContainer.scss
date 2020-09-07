@@ -1,0 +1,10 @@
+.dashboard-container {
+  position: relative;
+  @include absCenter;
+  width: 90vw;
+  min-height: 90vh;
+  font-family: "Merriweather Sans", sans-serif;
+  color: $text-color-dark;
+  @import "pages/dashboard";
+  @include scrollbar-y;
+}
